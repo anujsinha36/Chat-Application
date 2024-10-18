@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatScreen">
+
+    <include
+        android:id="@+id/custom_toolbar"
+        layout="@layout/toolbar"
+        > </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_above="@+id/ll1"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="40dp"
+            >
+            <EditText
+                android:id="@+id/edt_Message"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="80"
+                android:padding="15dp"
+                android:layout_margin="2dp"
+                android:hint="Enter Your Message"
+                android:background="@drawable/custom_resource"
+                >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/btn_send_msg"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="20"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/send_button"
+                >
+            </ImageView>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
