@@ -85,7 +85,6 @@ class ChatScreen : AppCompatActivity() {
                 dbRef.child("messages").child(receiverRoom).push().setValue(messageObj)
             }
             edtMessage.setText("")
-            println("this is done")
         }
 
     }
